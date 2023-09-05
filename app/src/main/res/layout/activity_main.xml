@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Spinner
+        android:id="@+id/spinnerview"
+        android:layout_width="145dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/x1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonGenerateRandomPoints"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/x1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="13dp"
+        android:hint="Ingrese x1"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/y1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerview" />
+
+    <EditText
+        android:id="@+id/y1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="11dp"
+        android:hint="Ingrese y1"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/x2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/x1" />
+
+    <EditText
+        android:id="@+id/x2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="9dp"
+        android:hint="Ingrese x2"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/y2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/y1" />
+
+    <EditText
+        android:id="@+id/y2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="233dp"
+        android:hint="Ingrese y2"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/Resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/x2" />
+
+    <Spinner
+        android:id="@+id/spinnerOperation"
+        android:layout_width="300dp"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/y2"
+        app:layout_constraintVertical_bias="0.378" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="505dp"
+        android:layout_marginBottom="35dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintEnd_toStartOf="@+id/textViewResult"
+        app:layout_constraintStart_toStartOf="@+id/textViewResult"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGenerateRandomPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generar Aleatoriamente"
+        app:layout_constraintEnd_toStartOf="@+id/textViewResult"
+        app:layout_constraintStart_toStartOf="@+id/textViewResult"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/Resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate" />
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="231dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewResult"
+        app:layout_constraintStart_toStartOf="@+id/textViewResult"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+</androidx.constraintlayout.widget.ConstraintLayout>
